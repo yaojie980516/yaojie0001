@@ -15,4 +15,4 @@ exports.getConnection = function(callback) {
       callback(err, conn);
     });
   };
-connection.end();
+pool.end();
