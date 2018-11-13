@@ -7,8 +7,8 @@ var connection = mysql.createConnection({
   database : 'mysql'
 });
 
-exports.getConnection = function(callback){
- connection.getConnection(functuin(err, conn){
+exports.getConnection = function(callback) {
+ connection.getConnection(functuin(err, conn) {
       if(err) {
           return callback(err);
          }
