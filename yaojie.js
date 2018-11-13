@@ -7,12 +7,13 @@ var connection = mysql.createConnection({
   database : 'mysql'
 });
 
-connection.connect();
-
-connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
-  if (error) throw error;
-  console.log('The solution is: ', results[0].solution);
-});
-connection.end();
+exports.getConnection = function(callback){
+ connection.getConnection(functuin(err, conn){
+      if(err) {
+          return callback(err);
+         }
+          callback(err, conn);
+ });
+};
 
 
