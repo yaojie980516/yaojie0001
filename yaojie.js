@@ -1,20 +1,14 @@
 var mysql      = require('mysql');
-var conn = require('../database/ConnectionString');
-var connection = mysql.createConnection({
+var connection = mysql.createPool({
+  connectionLimit: 100,
   host     : '192.168.1.115',
   port     : '3306',
   user     : 'root',
   password : 'eleclong',
   database : 'mysql'
+  debug: false,
+  multipleStatements: true
 });
 
-exports.getConnection = function(callback) {
- connection.getConnection(functuin(err, conn) {
-      if(err) {
-          return callback(err);
-         }
-          callback(err, conn);
- });
-};
 
 
