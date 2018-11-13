@@ -1,4 +1,5 @@
 var mysql      = require('mysql');
+var conn = require('../database/ConnectionString');
 var connection = mysql.createConnection({
   host     : '192.168.1.115',
   port     : '3306',
