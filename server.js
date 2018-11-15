@@ -7,5 +7,5 @@ http.createServer(function (request, response){
   
   response.end();
 
-  }).listen(88);
+  }).listen(68);
 console.log('server running at http://122.152.214.116:80/');
