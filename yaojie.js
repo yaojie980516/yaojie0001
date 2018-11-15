@@ -1,8 +1,4 @@
 var http = require('http');
-http.createServer(function (request, response){
-  response.writeHead(200, {'Content_Type': 'text/plain'});
-  response.end('Hello World\n');
-}).listen(8888);
 var mysql      = require('mysql');
 var connection = mysql.createPool({
   connectionLimit: 100,
@@ -14,6 +10,13 @@ var connection = mysql.createPool({
   debug: false,
   multipleStatements: true
 });
+http.createServer(function (request, response){
+
+  response.writeHead(200, {'Content_Type': 'text/plain'});
+
+  response.end('Hello World\n');
+
+}).listen(8888);
 console.log('Hello World!');
 
 
