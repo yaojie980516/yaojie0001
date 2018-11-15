@@ -1,11 +1,7 @@
-var http = require("http");
-var url = require("url");
-function onRequest(request, response) {
-    var pathname = url.parse(request.url).pathname;
-    console.log("Request for " + pathname + " recived.");
-    response.writeHead(200, {"Content-type": "text/plain"});
-    response.write("Hello word!");
-    response.end();
-}
-http.createServer(onRequest).listen(80);
-console.log("Server has started!");
+var http = require('http'); 
+http.createServer(function (request, response){ 
+  response.setHeader('Content_Type', 'text/html;charset=utf-8') 
+  response.write('<h1>你好NodeJS</h1>')  
+  response.end() 
+  }).listen(68) 
+console.log('server running at http://122.152.214.116:68/') 
