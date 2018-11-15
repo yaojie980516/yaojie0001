@@ -1,11 +1,11 @@
 var http = require('http');
 http.createServer(function (request, response){
 
-  response.writeHead(200, {'Content_Type': 'text/plain'});
+  response.setHeader('Content_Type', 'text/html;charset=utf-8')
 
-  response.write('Hello NodeJS\n');
+  response.write('<h1>你好NodeJS</h1>')
   
-  response.end();
+  response.end()
 
-  }).listen(68);
-console.log('server running at http://122.152.214.116:68/');
+  }).listen(68)
+console.log('server running at http://122.152.214.116:68/')
