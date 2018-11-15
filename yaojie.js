@@ -9,6 +9,7 @@ var connection = mysql.createPool({
   debug: false,
   multipleStatements: true
 });
+console.log('Hello World!');
 
 
 
