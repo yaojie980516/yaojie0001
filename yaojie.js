@@ -17,12 +17,7 @@ connection.connect(function(err){
       console.log('[connection connect]  succeed!');
 });  
 //执行SQL语句
-connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) { 
-     if (err) {
-             console.log('[query] - :'+err);
-        return;
-     }
-     console.log('The solution is: ', rows[0].solution);  
+ 
 });  
 //关闭connection
 connection.end(function(err){
