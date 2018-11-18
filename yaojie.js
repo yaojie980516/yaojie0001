@@ -6,8 +6,8 @@ var connection = mysql.createConnection({
   password : 'eleclong',
   database : 'mysql',
   port     : '3306',
-  debug: false,
-  multipleStatements: true
+  //debug: false,
+  //multipleStatements: true
 });
 connection.connect(function(err){
     if(err){        
