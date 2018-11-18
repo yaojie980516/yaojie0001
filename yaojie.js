@@ -16,9 +16,6 @@ connection.connect(function(err){
     }
       console.log('[connection connect]  succeed!');
 });  
-//执行SQL语句
- 
-});  
 //关闭connection
 connection.end(function(err){
     if(err){        
